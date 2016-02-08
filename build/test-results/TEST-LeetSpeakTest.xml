@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="LeetSpeakTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-02-08T23:11:17" hostname="epicodus-117.local" time="0.003">
+<testsuite name="LeetSpeakTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2016-02-08T23:46:22" hostname="epicodus-117.local" time="0.004">
   <properties/>
-  <testcase name="leetSpeakTranslate_makesCorrectReplacementsRegardlessOfCase_ignoresUppercase" classname="LeetSpeakTest" time="0.002"/>
+  <testcase name="leetSpeakTranslate_makesCorrectReplacementsRegardlessOfCase_ignoresUppercase" classname="LeetSpeakTest" time="0.003"/>
   <testcase name="leetSpeakTranslate_returnsAStringAsIsWhenNoLeetspeakIsPresent_wordDoesntChange" classname="LeetSpeakTest" time="0.0"/>
   <testcase name="leetSpeakTranslate_replacesEveryIInAStringWithA1_wordChanges" classname="LeetSpeakTest" time="0.0"/>
   <testcase name="leetSpeakTranslate_doesNotReplaceSWhenFirstLetter_wordChanges" classname="LeetSpeakTest" time="0.0"/>

@@ -7,8 +7,28 @@ import static spark.Spark.*;
 
 public class LeetSpeak {
   public static void main(String[] args) {
+    staticFileLocation("/public");
+    String layout = "templates/layout.vtl";
+
+    get("/leet", (request, response) -> {
+      HashMap model = new HashMap();
+
+      model.put("template", "templates/leet.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
+
+    get("/leettranslate", (request, response) -> {
+      HashMap model = new HashMap();
+      String inputPhrase = request.queryParams("englishPhrase");
+      String leetedPhrase = LeetSpeak.leetSpeakTranslate(inputPhrase);
+      model.put("originalPhrase", inputPhrase);
+      model.put("leetPhrase", leetedPhrase);
+      model.put("template", "templates/leettranslate.vtl");
+      return new ModelAndView(model, layout);
+    }, new VelocityTemplateEngine());
 
   }
+
   public static String leetSpeakTranslate(String phrase){
 
     phrase = phrase.replace('e' , '3');
